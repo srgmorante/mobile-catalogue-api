@@ -1,6 +1,8 @@
 'use strict';
+// Import our mocked Data
 var mobileMocks = require( '../mobileMocks');
 
+// Create a controller where receive the request an executes the res callback
 function getMobiles (req, res) {
     res.status(200).send({mobile: mobileMocks.allMobiles});
 }

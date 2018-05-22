@@ -1,3 +1,4 @@
+//import the dependencies
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -7,6 +8,7 @@ var logger = require('morgan');
 var mobileRouter = require('./routes/mobile.router');
 var app = express();
 
+//This function is to allow Cross Domain connections
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', "*");
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
@@ -25,6 +27,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(allowCrossDomain);
 
+
+//use the router wich We will to use to connect the endpoint
 app.use('/phones', mobileRouter);
 
 
