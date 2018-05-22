@@ -1,6 +1,6 @@
 # mobile-catalogue-api
 
-To run the server, you only execute in the project folder the next command:
+To run the server, you only execute in the project folder the next command (previous npm install):
 
 ```
 npm start 3000
